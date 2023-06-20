@@ -2,6 +2,11 @@ var apiKey = "80c0494135a7a288b17f77c5b40a9fe3";
 var forecast = [];
 var city = "tokyo";
 function showWeather() {
+    document.getElementById("moveHeader").classList.remove("moveHeader");
+    document.getElementById("moveHeader").classList.add("moveHeader");
+    setTimeout(function () {
+        document.getElementById("moveHeader").classList.remove("moveHeader");
+    }, 3000);
     city = document.getElementById("userInput").value;
     fetch("https://api.openweathermap.org/data/2.5/weather?q=" +
         city +

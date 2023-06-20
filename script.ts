@@ -5,6 +5,16 @@ let city: string = "tokyo"
 
 function showWeather(): any {
 
+
+    document.getElementById("moveHeader")!.classList.remove("moveHeader")
+    document.getElementById("moveHeader")!.classList.add("moveHeader")
+
+    setTimeout(() => {
+        document.getElementById("moveHeader")!.classList.remove("moveHeader")
+
+    }, 3000);
+
+
     city = (document.getElementById("userInput") as HTMLInputElement).value
 
 
@@ -16,7 +26,7 @@ function showWeather(): any {
         .then((response) => response.json())
         .then((data) => {
             if (data.cod == 404) {
-                return alert("we couldn't find the city you were looking for, are you sure you typed everything correctly?")   
+                return alert("we couldn't find the city you were looking for, are you sure you typed everything correctly?")
             }
             else
                 displayForecast(data)

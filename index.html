@@ -13,6 +13,20 @@
 </head>
 <style>
 
+    .moveHeader{
+        animation: moveHeader 1s forwards 0.5s 1 ; 
+        
+        }
+
+    @keyframes moveHeader {
+        0%{transform: translate(0px);}
+        25%{transform: translate(30px);}
+        50%{transform: translate(0px);}
+        75%{transform: translate(-30px);}
+        100%{transform: translate(0px);}
+        
+    }
+
     @keyframes textclip {
         to {
             background-position: 200% center;
@@ -22,7 +36,7 @@
     @media only screen and (min-width: 514px) {
 
         .container {
-            width: 50%;
+            width: 35%;
         }
     }
 
@@ -34,18 +48,18 @@
 
 <body style="background-image: url('https://source.unsplash.com/1600x900/?landscape');">
     <div class="mt-5 m-auto rounded-2">
-        <h1 class="mt-5 text-center text-danger text-decoration-underline display-5 bg-body">Whats <span
+        <h1 class="mt-5 text-center text-danger text-decoration-underline display-4" id="moveHeader"><span class="bg-white rounded-top pb-4 px-5" style="z-index: -1;">Whats <span
                 class="text-dark">The Weather
-                ?</span></h1>
+                ?</span></h1></span>
         <div class=" text-center fs-1 display-1 my-3 p-3 rounded-5 text-white mx-5  "
         id="animation"
-            style="font-weight: 900; background-color: #212529;;">Get the Current
+            style="font-weight: 900; background-color: #212529; z-index: 2; position: relative;">Get the Current
             Forecast Of Evrey
             City In The World </div>
         <div class="row d-flex justify-content-center m-0 mt-4">
             <input type="search" id="userInput" class="form-control"
                 style="width: 20rem; border-top-right-radius: 0px;  border-end-end-radius: 0px;" />
-            <button type="button" class="btn btn-primary"
+            <button type="button" class="btn btn-danger"
                 style="width: 50px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;"
                 onclick="showWeather()">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -71,6 +85,8 @@
             </div>
         </div>
     </div>
+    <p class="bg-danger display-6 fs-5 position-absolute bottom-0 w-100 text-center p-2 text-white">Developed with ♥ By Noam Kux</p>
+
     <script src="script.js"></script>
 </body>
 
