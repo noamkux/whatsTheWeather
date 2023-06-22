@@ -27,6 +27,3 @@ This is a simple weather application that allows users to get the current weathe
 - Background image: [Unsplash](https://unsplash.com/) - A source for freely-usable images.
 - Developed by Noam Kux.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
